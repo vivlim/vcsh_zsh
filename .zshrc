@@ -1,4 +1,6 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+# remove windows paths if present (i.e. /mnt/c). Otherwise npm from windows conflicts
+export PATH=`echo $PATH | tr ':' '\n' | grep -v "/mnt/c" | xargs | sed -e 's/ /:/g'`
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
