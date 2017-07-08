@@ -94,3 +94,6 @@ alias tmux="tmux -2"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable rbenv vcs root_indicator)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history command_execution_time time)
 
+alias youtube-dl-numbered="youtube-dl -o \"%(autonumber)s-%(title)s.%(ext)s\""
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
