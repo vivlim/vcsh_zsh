@@ -97,3 +97,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history command_execu
 alias youtube-dl-numbered="youtube-dl -o \"%(autonumber)s-%(title)s.%(ext)s\""
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+if ! [ -x "$(command -v pt)" ]; then
+    alias pt=/usr/bin/ag
+fi
