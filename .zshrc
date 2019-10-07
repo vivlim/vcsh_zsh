@@ -101,3 +101,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 if ! [ -x "$(command -v pt)" ]; then
     alias pt=/usr/bin/ag
 fi
+
+# https://stackoverflow.com/a/40192494
+if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
+    tmux attach-session || tmux new-session
+fi
