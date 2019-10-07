@@ -103,6 +103,6 @@ if ! [ -x "$(command -v pt)" ]; then
 fi
 
 # https://stackoverflow.com/a/40192494
-if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
+if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
     tmux attach-session || tmux new-session
 fi
