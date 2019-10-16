@@ -5,7 +5,7 @@ export PATH=`echo $PATH | tr ':' '\n' | grep -v "/mnt/c" | xargs | sed -e 's/ /:
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-export TERM=xterm-256color
+#export TERM=xterm-256color
 
 export EDITOR=/usr/bin/vim
 
